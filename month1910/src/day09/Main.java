@@ -1,24 +1,22 @@
 package day09;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-	
-	public void mul (int a, int b) {
-		int result = a*b;
-		while(b>0) {
-			System.out.println(a*(b%10));
-			b/=10;
-		}
-		System.out.println(result);
-	}
 
 	public static void main(String[] args) {
-		
 		Scanner scan = new Scanner(System.in);
-		Main main = new Main();
+
+		List<Integer> list = new ArrayList<Integer>();
 		
-		main.mul(scan.nextInt(), scan.nextInt());
+		list.add((Integer)scan.nextInt());
+		list.add((Integer)scan.nextInt());
+		list.add((Integer)scan.nextInt());
+		list.sort(null);
+		
+		System.out.println(list.get(1));
 		
 		scan.close();
 	}
